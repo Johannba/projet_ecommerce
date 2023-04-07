@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ExempleConfig(AppConfig):
+class OrdersConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "projet_ecommerce.users"
+    name = "e-commerce.orders"

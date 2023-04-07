@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class AddressesConfig(AppConfig):
+class CompaniesConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "projet_ecommerce.addresses"
+    name = "e-commerce.companies"

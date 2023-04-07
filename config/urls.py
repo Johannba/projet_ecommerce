@@ -11,8 +11,8 @@ from django.conf import settings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("projet_ecommerce.pages.urls")),
-    path("users/", include("projet_ecommerce.users.urls")),
+    path("", include("e-commerce.pages.urls")),
+    path("users/", include("e-commerce.users.urls")),
 ]
 
 if settings.DEBUG:

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class SuppliesConfig(AppConfig):
+class ExempleConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "projet_ecommerce.supplies"
+    name = "e-commerce.users"

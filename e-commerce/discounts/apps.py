@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class StocksConfig(AppConfig):
+class DiscountsConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "projet_ecommerce.stocks"
+    name = "e-commerce.discounts"
