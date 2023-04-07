@@ -34,8 +34,8 @@ ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])
 # Application definition
 
 INSTALLED_APPS = [
-    "e-commerce.templates.pages",
-    "e-commerce.users",
+    "ecommerce.pages",
+    "ecommerce.users",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -46,15 +46,15 @@ INSTALLED_APPS = [
     "crispy_forms",
     "crispy_bootstrap5",
     'webpack_boilerplate',
-    "e-commerce.supplies",
-    "e-commerce.addresses",
-    "e-commerce.discounts",
-    "e-commerce.images",
-    "e-commerce.orders",
-    "e-commerce.prices",
-    "e-commerce.products",
-    "e-commerce.stocks",
-    "e-commerce.companies",
+    "ecommerce.supplies",
+    "ecommerce.addresses",
+    "ecommerce.discounts",
+    "ecommerce.images",
+    "ecommerce.orders",
+    "ecommerce.prices",
+    "ecommerce.products",
+    "ecommerce.stocks",
+    "ecommerce.companies",
 ]
 
 MIDDLEWARE = [
