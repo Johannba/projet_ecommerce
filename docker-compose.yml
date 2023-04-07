@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+    postgres:
+        container_name: projet_ecommerce_postgres_container_17041
+        image: postgres:latest
+        working_dir: /app
+        restart: always
+        ports:
+            - "17041:5432"
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres
+            POSTGRES_DB: projet_ecommerce
+        volumes:
+            - "postgres_projet_ecommerce_17041:/var/lib/postgresql"
+
+volumes:
+    postgres_projet_ecommerce_17041:
