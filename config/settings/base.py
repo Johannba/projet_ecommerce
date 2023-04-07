@@ -46,6 +46,15 @@ INSTALLED_APPS = [
     "crispy_forms",
     "crispy_bootstrap5",
     'webpack_boilerplate',
+    "projet_ecommerce.supplies",
+    "projet_ecommerce.addresses",
+    "projet_ecommerce.discounts",
+    "projet_ecommerce.images",
+    "projet_ecommerce.orders",
+    "projet_ecommerce.prices",
+    "projet_ecommerce.products",
+    "projet_ecommerce.stocks",
+    "projet_ecommerce.companies",
 ]
 
 MIDDLEWARE = [
