@@ -34,7 +34,6 @@ ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=[])
 # Application definition
 
 INSTALLED_APPS = [
-    "ecommerce.pages",
     "ecommerce.users",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -55,6 +54,7 @@ INSTALLED_APPS = [
     "ecommerce.products",
     "ecommerce.stocks",
     "ecommerce.companies",
+    "ecommerce.pages",
 ]
 
 MIDDLEWARE = [
