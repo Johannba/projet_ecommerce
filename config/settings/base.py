@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     "ecommerce.stocks",
     "ecommerce.companies",
     "ecommerce.pages",
+    "django.contrib.sites",
 ]
 
 MIDDLEWARE = [
@@ -189,3 +190,4 @@ MESSAGE_TAGS = {
     messages.ERROR: 'alert-danger',
  }
  
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

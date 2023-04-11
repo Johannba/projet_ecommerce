@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth import models as auth_models
 
 
+from ecommerce.addresses.models import Address,Country
 from ecommerce.companies.models import CompagnyCategory
 
 class User(auth_models.AbstractUser):
@@ -18,29 +19,20 @@ class User(auth_models.AbstractUser):
     civility = models.CharField(max_length=8,choices=ROLE_CHOICES)
     phone_mobile = models.CharField(max_length=20)
     phone = models.CharField(max_length=20)
-    addresses = models.CharField(max_length=20)
-    zip_code = models.CharField(max_length=5)
-    city = models.CharField(max_length=50)
-    K_bis = models.CharField(max_length=100)
-    category = models.ForeignKey(CompagnyCategory,
-                                    related_name='compagnycategory',
+    address = models.ForeignKey(Address,
+                                    related_name='address',
                                     on_delete=models.CASCADE)
-    created = models.DateTimeField(auto_now_add=True)
-    class Meta:
-        ordering = ['category']
-        indexes = [
-            models.Index(fields=['id', 'slug']),
-            models.Index(fields=['category']),
-            models.Index(fields=['-created']),
-    ]
-    def __str__(self):
-        return self.name
-                
-
+    city = models.ForeignKey(Country,
+                                    related_name='country',
+                                    on_delete=models.CASCADE)
+    K_bis = models.CharField(max_length=100)
+    email= models.CharField(max_length=100)
+    
+    
     
 class UserDocument():
     identity_card = models.ImageField(upload_to='compagnycategory/%Y/%m/%d',
                                  blank=True)
     
-class email():
+class EmailConfirm():
     ...
