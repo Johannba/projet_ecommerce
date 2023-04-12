@@ -7,7 +7,7 @@ from django.urls import path, include
 from django.views import defaults as default_views
 from django.conf.urls.static import static
 from django.conf import settings
-
+import debug_toolbar
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -48,7 +48,7 @@ if settings.DEBUG:
         path("500/", default_views.server_error),
     ]
     if "debug_toolbar" in settings.INSTALLED_APPS:
-        import debug_toolbar
+        
 
         urlpatterns = [
             path("__debug__/", include(debug_toolbar.urls))
