@@ -5,7 +5,11 @@ from django.contrib.auth import models as auth_models
 from ecommerce.addresses.models import Address,Country
 from ecommerce.companies.models import CompagnyCategory
 
+
 class User(auth_models.AbstractUser):
+    """Utilisateur personnalisé pour l'application."""
+
+class Client(auth_models.AbstractUser):
     """Utilisateur personnalisé pour l'application."""
     M= "Masculin"
     F= "Féminin"
@@ -33,6 +37,7 @@ class User(auth_models.AbstractUser):
 class UserDocument():
     identity_card = models.ImageField(upload_to='compagnycategory/%Y/%m/%d',
                                  blank=True)
-    
+  
+        
 class EmailConfirm():
     ...

@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sites",
     "django_extensions",
     "crispy_forms",
     "crispy_bootstrap5",
@@ -55,7 +56,6 @@ INSTALLED_APPS = [
     "ecommerce.stocks",
     "ecommerce.companies",
     "ecommerce.pages",
-    "django.contrib.sites",
 ]
 
 MIDDLEWARE = [
@@ -178,6 +178,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Configuration de of the authentication
 AUTH_USER_MODEL = "users.User"
+AUTH_USER_MODEL = "users.Client"
 LOGIN_REDIRECT_URL = "pages:home"
 LOGOUT_REDIRECT_URL = "pages:home"
 
