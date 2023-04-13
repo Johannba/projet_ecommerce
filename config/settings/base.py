@@ -178,7 +178,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Configuration de of the authentication
 AUTH_USER_MODEL = "users.User"
-AUTH_USER_MODEL = "users.Client"
 LOGIN_REDIRECT_URL = "pages:home"
 LOGOUT_REDIRECT_URL = "pages:home"
 
