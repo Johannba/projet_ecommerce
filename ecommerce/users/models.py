@@ -1,12 +1,12 @@
 from django.db import models
 from django.contrib.auth import models as auth_models
 
-
 from ecommerce.addresses.models import Address,Country
 from ecommerce.companies.models import CompagnyCategory
 from ecommerce.users.managers import CustomUserManager
 
 
+    
 class User(auth_models.AbstractUser):
     susername = None
     email = models.EmailField(("email address"), unique=True)
@@ -43,8 +43,7 @@ class User(auth_models.AbstractUser):
 
     
 class UserDocument():
-    identity_card = models.ImageField(upload_to='compagnycategory/%Y/%m/%d',
-                                 blank=True)
+    identity_card = models.ImageField(upload_to='compagnycategory/%Y/%m/%d')
   
         
 class EmailConfirm():
