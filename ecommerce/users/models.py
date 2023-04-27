@@ -5,14 +5,12 @@ from ecommerce.addresses.models import Address,Country
 from ecommerce.companies.models import CompagnyCategory
 from ecommerce.users.managers import CustomUserManager
 
-
-    
 class User(auth_models.AbstractUser):
-    susername = None
+    username = None
     email = models.EmailField(("email address"), unique=True)
 
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ['civility',]
 
     objects = CustomUserManager()
 
@@ -26,7 +24,6 @@ class User(auth_models.AbstractUser):
     ROLE_CHOICES=((M,"Masculin"),
                   (F,"Féminin"))
     
-    slug = models.SlugField(max_length=200)
     compagny = models.ForeignKey(CompagnyCategory,
                                     related_name='compagny',
                                     on_delete=models.CASCADE)
@@ -35,11 +32,11 @@ class User(auth_models.AbstractUser):
     phone = models.CharField(max_length=20, blank=True)
     address = models.ForeignKey(Address,
                                     related_name='address',
-                                    on_delete=models.CASCADE)
+                                    on_delete=models.CASCADE,null=True)
     city = models.ForeignKey(Country,
                                     related_name='country',
-                                    on_delete=models.CASCADE)
-    K_bis = models.CharField(max_length=100)
+                                    on_delete=models.CASCADE,null=True)
+    k_bis = models.CharField(max_length=100)
 
     
 class UserDocument():
