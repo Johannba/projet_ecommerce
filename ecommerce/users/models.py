@@ -26,7 +26,7 @@ class User(auth_models.AbstractUser):
     
     compagny = models.ForeignKey(CompagnyCategory,
                                     related_name='compagny',
-                                    on_delete=models.CASCADE)
+                                    on_delete=models.CASCADE,null=True)
     civility = models.CharField(max_length=8,choices=ROLE_CHOICES)
     phone_mobile = models.CharField(max_length=20,blank=True)
     phone = models.CharField(max_length=20, blank=True)
