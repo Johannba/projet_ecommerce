@@ -13,7 +13,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("ecommerce.pages.urls")),
     path("users/", include("ecommerce.users.urls")),
-    path('', include('ecommerce.products.urls', namespace='products')),
+    path('product/', include('ecommerce.products.urls', namespace='products')),
     path('__debug__/', include(debug_toolbar.urls)),  
 ]
 
