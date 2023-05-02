@@ -149,7 +149,6 @@ STATICFILES_STORAGE = "django.contrib.staticfiles.storage.ManifestStaticFilesSto
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = [APPS_DIR / "static"]
-
 # Configuration of python-webpack-boilerplate
 WEBPACK_LOADER = {
     'MANIFEST_FILE': APPS_DIR / "static" / "manifest.json",
