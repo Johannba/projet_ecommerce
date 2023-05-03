@@ -13,7 +13,7 @@ from config import env
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 PROJECT_DIR = BASE_DIR / "config"
-APPS_DIR = BASE_DIR / "projet_ecommerce"
+APPS_DIR = BASE_DIR / "ecommerce"
 
 
 # Quick-start development settings - unsuitable for production
@@ -66,7 +66,6 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.security.SecurityMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"

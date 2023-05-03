@@ -1,7 +1,10 @@
 from django.urls import path, include
 
+from ecommerce.pages.views import home_view
+
+
 app_name = "pages"
 
 urlpatterns = [
-    path("", include("django.contrib.auth.urls")),
+    path("home/", home_view, name= "home"),
 ]
