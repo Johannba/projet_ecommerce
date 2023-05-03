@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-extensions = "*"
+django-environ = "*"
+pillow = "==9.2.0"
+crispy-bootstrap5 = "*"
+python-webpack-boilerplate = "*"
+django-allauth = "*"
+django-debug-toolbar = "*"
+psycopg = "*"
+environ = "*"
+
+[dev-packages]
+pytest = "*"
+pytest-django = "*"
+psycopg2-binary = "*"
+
+[production]
+gunicorn = "*"
+psycopg2 = "*"
+
+[requires]
+python_version = "3.10"
