@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     "ecommerce.stocks",
     "ecommerce.companies",
     "ecommerce.pages",
+    "ecommerce.cart",
 ]
 
 MIDDLEWARE = [
