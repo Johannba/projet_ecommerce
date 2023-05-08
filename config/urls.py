@@ -13,8 +13,9 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("ecommerce.pages.urls")),
     path("users/", include("ecommerce.users.urls")),
-    path('products/', include('ecommerce.products.urls', namespace='products')),
-    path('__debug__/', include(debug_toolbar.urls)),  
+    path("cart/", include("ecommerce.cart.urls", namespace="cart")),
+    path("products/", include("ecommerce.products.urls", namespace="products")),
+    path("__debug__/", include(debug_toolbar.urls)),
 ]
 
 if settings.DEBUG:
@@ -50,8 +51,4 @@ if settings.DEBUG:
         path("500/", default_views.server_error),
     ]
     if "debug_toolbar" in settings.INSTALLED_APPS:
-        
-
-        urlpatterns = [
-            path("__debug__/", include(debug_toolbar.urls))
-        ] + urlpatterns
+        urlpatterns = [path("__debug__/", include(debug_toolbar.urls))] + urlpatterns
