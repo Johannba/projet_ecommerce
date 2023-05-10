@@ -22,7 +22,7 @@ APPS_DIR = BASE_DIR / "ecommerce"
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env(
     "SECRET_KEY",
-    default="django-insecure-s_!(-mt*(!omlw-&fn+&%+!i7knohfnh7ke2g9l=e696gh9!by"
+    default="django-insecure-s_!(-mt*(!omlw-&fn+&%+!i7knohfnh7ke2g9l=e696gh9!by",
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     "django_extensions",
     "crispy_forms",
     "crispy_bootstrap5",
-    'webpack_boilerplate',
+    "webpack_boilerplate",
     "ecommerce.supplies",
     "ecommerce.addresses",
     "ecommerce.discounts",
@@ -151,7 +151,7 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_DIRS = [APPS_DIR / "static"]
 # Configuration of python-webpack-boilerplate
 WEBPACK_LOADER = {
-    'MANIFEST_FILE': APPS_DIR / "static" / "manifest.json",
+    "MANIFEST_FILE": APPS_DIR / "static" / "manifest.json",
 }
 
 MEDIA_ROOT = BASE_DIR / "media"
@@ -159,13 +159,13 @@ MEDIA_URL = "media/"
 
 
 ADMINS = [
-    ('Johann Bacha', 'johann-bacha@example.com'),
+    ("Johann Bacha", "johann-bacha@example.com"),
 ]
 MANAGERS = ADMINS
 
 # Email configuration
-EMAIL_SUBJECT_PREFIX = '[Projet_ecommerce] '
-DEFAULT_FROM_EMAIL = 'johann-bacha@example.com'
+EMAIL_SUBJECT_PREFIX = "[Projet_ecommerce] "
+DEFAULT_FROM_EMAIL = "johann-bacha@example.com"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -183,20 +183,19 @@ LOGOUT_REDIRECT_URL = "pages:home"
 
 # Configuration of message tags
 MESSAGE_TAGS = {
-    messages.DEBUG: 'alert-secondary',
-    messages.INFO: 'alert-info',
-    messages.SUCCESS: 'alert-success',
-    messages.WARNING: 'alert-warning',
-    messages.ERROR: 'alert-danger',
- }
- 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    messages.DEBUG: "alert-secondary",
+    messages.INFO: "alert-info",
+    messages.SUCCESS: "alert-success",
+    messages.WARNING: "alert-warning",
+    messages.ERROR: "alert-danger",
+}
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 ACCOUNT_ALLOW_REGISTRATION = True
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
-ACCOUNT_FORMS = {
-    "signup": "chemin.vers.mon.UserSignupForm"
-}
+ACCOUNT_FORMS = {"signup": "chemin.vers.mon.UserSignupForm"}
 
-SITE_ID=1
+SITE_ID = 1
+CART_SESSION_ID = "cart"
